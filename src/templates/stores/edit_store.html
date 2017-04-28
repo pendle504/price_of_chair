@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="page-header">
+        <h1>Edit Store</h1>
+    </div>
+    <div class="form-size">
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Store name</label>
+                <input type="text" class="form-control" id="name" name="name"
+                       placeholder="Store Name" value="{{store.name}}">
+            </div>
+            <div class="form-group">
+                <label for="name">Store URL Prefix</label>
+                <input type="text" class="form-control" id="url_prefix" name="url_prefix"
+                       placeholder="http://...." value="{{store.url_prefix}}" aria-describedby="priceLimitBlock">
+                <p id="priceLimitBlock" class="help-block">Type the store URL (i.e) http://www.amazon.com</p>
+            </div>
+            <div class="form-group">
+                <label for="tag_name">Store Tag Name</label>
+                <input type="text" class="form-control" id="tag_name" name="tag_name"
+                       placeholder="span" value="{{store.tag_name}}" aria-describedby="tagHelpBlock">
+                <p id="tagHelpBlock" class="help-block">What tag are we looking for on the page? usually <code>span</code></p>
+            </div>
+                        <div class="form-group">
+                <label for="query">Query</label>
+                <input type="text" class="form-control" id="query" name="query"
+                       placeholder='{"id":"price-now"}' value='{{store.query | tojson}}' aria-describedby="queryHelpBlock">
+                <p id="queryHelpBlock" class="help-block">Dictionary Query that you'd like to find</p>
+            </div>
+            <button class="btn btn-success" type="submit">Update</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+.form-size{
+    max-width:440px;
+    margin: 0 auto;
+    background-color: orange;
+    padding: 20px;
+    border: 10px solid purple;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Shop4Me</h1>
+    <p>Shopping is fun! But the cart can add up quickly.... so why not get some help?
+        </br>Sign up now!</p>
+  <p><a class="btn btn-primary btn-lg" href="{{url_for('users.register_user')}}" role="button">Get Started!</a></p>
+</div>
+{% endblock %}
