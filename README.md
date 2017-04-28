@@ -1,2 +1,2 @@
 # price_of_chair
-price of chair app
+This application is created by Jared Shulman with help from the SchoolofCode-me
