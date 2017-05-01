@@ -2,14 +2,14 @@ import os
 import pymongo
 
 class Database(object):
-    URI = os.environ.get("MONGOBD_URI")
+    URI = os.environ.get("MONGODB_URI")
     DATABASE = None
 
     @staticmethod
     def initialize():
         client = pymongo.MongoClient(Database.URI)
-        print(client)
-        Database.DATABASE = client.get_default_database()
+        print('This is the client',client)
+        Database.DATABASE = client.get_database()
 
     @staticmethod
     def insert(collection,data):
