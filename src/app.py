@@ -10,8 +10,6 @@ app.secret_key = "123"
 def init_db():
     Database.initialize()
 
-
-
 @app.route('/')
 def home():
     return render_template('home.html')
